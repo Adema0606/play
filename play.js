@@ -339,7 +339,6 @@ while (true) {
         } else if (choice === "4") {
             room = "деревня";
         } else {
-18:13
 alert("Такой дороги нет.");
         }
     }

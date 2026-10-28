@@ -281,3 +281,34 @@ while (true) {
             alert("Такого действия нет.");
         }
     }
+     else if (room === "оружейная") {
+        const choice = prompt(
+            "Оружейная\n" +
+            "1 — Взять светящийся меч\n" +
+            "2 — Вернуться в башню\n" +
+            "9 — Вернуться в деревню\n" +
+            "0 — Завершить игру"
+        );
+
+        if (choice === "0" || choice === null) {
+            break;
+        } else if (choice === "1") {
+            if (inventory.includes("магический меч")) {
+                alert("Меч уже у вас.");
+            } else {
+                const takeSword = confirm("Это магический меч. Взять его?");
+                if (takeSword === true) {
+                    inventory.push("магический меч");
+                    alert("Магический меч добавлен в рюкзак!");
+                } else {
+                    alert("Вы оставили меч на стойке.");
+                }
+            }
+        } else if (choice === "2") {
+            room = "башня волшебника";
+        } else if (choice === "9") {
+            room = "деревня";
+        } else {
+            alert("Такого действия нет.");
+        }
+    }
